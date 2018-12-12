@@ -11,7 +11,7 @@
 		},
 		"dataSources": {
 			"mainService": {
-				"uri": "/ODATA_SAMPLE/V2/(S(putAnyRandomStringHere))/OData/OData.svc/",
+				"uri": "/ODATA_SAMPLE/V2/(S(lyton))/OData/OData.svc/",
 				"type": "OData",
 				"settings": {
 					"odataVersion": "2.0",

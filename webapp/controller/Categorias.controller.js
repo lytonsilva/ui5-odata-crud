@@ -2,12 +2,12 @@
 sap.ui.define([
 	"ovly/odata/crud/controller/BaseController",
 	"ovly/odata/crud/model/formatter"
-], function (BaseController, formatter) {
+], function (BaseController, Formatador) {
 	"use strict";
 
 	return BaseController.extend("ovly.odata.crud.controller.Categorias", {
 
-		formatter: formatter,
+		myFormatter: Formatador,
 
 		onInit: function () {
 
@@ -15,12 +15,12 @@ sap.ui.define([
 
 		onItemPress: function (oEvent) {
 			var oListItem = oEvent.getParameters().listItem;
-			// var oContext = oListItem.getBindingContext();
-			// var oCategory = oContext.getObject();
+			var oContext = oListItem.getBindingContext();
+			var oCategory = oContext.getObject();
 
-			// this.getRouter().navTo("categoriaDetalhe", {
-			// 	idCategoria: oCategory.ID
-			// });
+			this.getRouter().navTo("categoriaDetalhe", {
+				idCategoria: oCategory.ID
+			});
 		},
 
 		onAdd: function (oEvent) {
@@ -30,7 +30,7 @@ sap.ui.define([
 		onEdit: function (oEvent) {
 			// var oContext = oEvent.getSource().getBindingContext();
 			// var sIdCategoria = oContext.getProperty("ID");
-			
+
 			// this.getRouter().navTo("categoriaCadastroEditar", {
 			// 	idCategoria: sIdCategoria
 			// });

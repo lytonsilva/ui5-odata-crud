@@ -5,7 +5,7 @@
 			<List mode="SingleSelectMaster" itemPress="onItemPress" items="{path: '/Categories' }">
 				<items>
 					<StandardListItem detailPress="onEdit" type="DetailAndActive"
-						title="{path: 'ID', type: 'sap.ui.model.odata.type.Int32', formatOptions: { pattern: '0000'} } - {path: 'Name', formatter: '.formatter.upperCase'}"/>
+						title="{path: 'ID', type: 'sap.ui.model.odata.type.Int32', formatOptions: { pattern: '0000'} } - {path: 'Name', formatter: '.myFormatter.upperCase'}"/>
 				</items>
 			</List>
 		</semantic:content>
